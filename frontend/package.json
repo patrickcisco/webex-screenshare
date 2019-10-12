@@ -1,0 +1,41 @@
+{
+  "name": "guest-issuer-example",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.5.0",
+    "@material-ui/icons": "^4.4.3",
+    "classnames": "^2.2.6",
+    "guestissuer": "^0.6.2",
+    "jsonwebtoken": "^8.5.1",
+    "loglevel": "^1.6.4",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "react-svg": "^10.0.22",
+    "webex": "^1.80.18"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "ssl": "HTTPS=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
