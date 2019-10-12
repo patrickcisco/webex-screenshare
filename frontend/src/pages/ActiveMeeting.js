@@ -129,51 +129,49 @@ function ActiveMeeting(props) {
           log.warn('no active meeting');
           return
         }
-        if (meeting) {
-          log.debug('active meeting');
-          meeting.on('error', (err) => {
-            log.warn('error with meeting', err);
+        log.debug('active meeting');
+        meeting.on('error', (err) => {
+          log.warn('error with meeting', err);
+        });
+        meeting.on(MEETING_EVENTS.selfGuestAdmitted, () => {
+          log.debug('guest has been admitted to the meeting', 'media settings', mediaSettings);
+          meeting.addMedia({
+            mediaSettings
+          })
+        });
+        meeting.on(MEETING_EVENTS.stoppedSharingLocal, () => {
+          log.debug('media stoped sharing local');
+          meeting.updateShare({
+              sendShare: false,
+              receiveShare: true
           });
-          meeting.on(MEETING_EVENTS.selfGuestAdmitted, () => {
-            log.debug('guest has been admitted to the meeting', 'media settings', mediaSettings);
-            meeting.addMedia({
-              mediaSettings
-            })
-          });
-          meeting.on(MEETING_EVENTS.stoppedSharingLocal, () => {
-            log.debug('media stoped sharing local');
-            meeting.updateShare({
-                sendShare: false,
-                receiveShare: true
-            });
-          });
-          // Handle media streams changes to ready state
-          meeting.on(MEDIA_EVENTS.ready, (media) => {
-            log.debug('new media event available', media);
-            if (!media) {
-              log.warn('no media');
-              return;
-            }
-            if (media.type === MEDIA_TYPES.remoteShare) {
-              // set remote share screen to the correct media stream
-              log.debug('setting remote share screen to available media');
-              setRemoteShareScreen(media.stream);
-            }
-          });
-          // Handle media streams stopping
-          meeting.on(MEDIA_EVENTS.stopped, (media) => {
-            // Remove media streams
-            log.debug('setting remote share screen to null');              
-            setRemoteShareScreen(null);
-          });
-          // Update participant info
-          meeting.members.on(MEMBERS_EVENTS.membersUpdate, (delta) => {
-            log.debug('member update', delta);
-          });
-          meeting.on('all', (event) => {
-            log.debug('generic meeting event', event);
-          });
-      }
+        });
+        // Handle media streams changes to ready state
+        meeting.on(MEDIA_EVENTS.ready, (media) => {
+          log.debug('new media event available', media);
+          if (!media) {
+            log.warn('no media');
+            return;
+          }
+          if (media.type === MEDIA_TYPES.remoteShare) {
+            // set remote share screen to the correct media stream
+            log.debug('setting remote share screen to available media');
+            setRemoteShareScreen(media.stream);
+          }
+        });
+        // Handle media streams stopping
+        meeting.on(MEDIA_EVENTS.stopped, (media) => {
+          // Remove media streams
+          log.debug('setting remote share screen to null');              
+          setRemoteShareScreen(null);
+        });
+        // Update participant info
+        meeting.members.on(MEMBERS_EVENTS.membersUpdate, (delta) => {
+          log.debug('member update', delta);
+        });
+        meeting.on('all', (event) => {
+          log.debug('generic meeting event', event);
+        });
     }
     
     const shareLocalScreen = () => {
