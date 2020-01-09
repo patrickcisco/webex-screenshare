@@ -24,4 +24,3 @@ yarn-error.log*
 
 # App Specific Ignored Files
 nginxconfig.io-webexscreenshare/
-src/pages/devnet.svg
