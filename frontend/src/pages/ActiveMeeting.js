@@ -16,9 +16,7 @@ import CircularLoader from '../components/CircularLoader';
 import Video from '../components/Video';
 
 // webex
-import {generateJWT} from '../webex/auth';
-
-
+import {generateJWT, generateAccessToken} from '../webex/auth';
 
 import DevNet from './devnet.svg'
 // css
@@ -74,6 +72,7 @@ function ActiveMeeting(props) {
     const [meetingJoined, setMeetingJoined] = useState(false);
     const [remoteShareScreen, setRemoteShareScreen] = useState(null);
     const [activeMeeting, setActiveMeeting] = useState(null);
+    const [accessToken, setAccessToken] = useState(null);
     const [webexReady, setWebexReady] = useState(null);
     const [jwt, setJWT] = useState(null);
     const [webex, setWebex] = useState(null);
@@ -82,45 +81,71 @@ function ActiveMeeting(props) {
     const classes = useStyles();
 
     const decodedName = Buffer.from(name, 'base64').toString('ascii');
+    const exchangeAccessToken = () => {
+        const generatedJWT = generateJWT(name, decodedName);
+        generateAccessToken(generatedJWT)
+        .then(response => {
+            log.debug("access token exchanged");
+            setAccessToken(response.data.token);
+        })
+        .catch((error) => {
+            log.error(error);
+        })
+    }
     const initWebex = () => {
       const webexclient = Webex.init({
         config: {
           meetings: {
             deviceType: 'WEB'
           }
+        },
+        credentials: {
+          access_token: accessToken
         }
       });
       setWebex(webexclient);
     }
-    if (!webex) {
+    if (!accessToken) {
+      exchangeAccessToken();
+    }
+    if (accessToken && !webex) {
       initWebex();
     }
+
+    console.log('webex', webex);
     const registerWebex = () => {
-      if (jwt === null) {
+      if (accessToken === null) {
         log.debug('unable to register webex without a jwt');
         return;
       }
-      webex.authorization.requestAccessTokenFromJwt({jwt})
-      .then(() => {
-        if (webex.canAuthorize) {
-          // Register our device with Webex cloud
-          if (!webex.meetings.registered) {
-            webex.meetings.register()
-                  // Sync our meetings with existing meetings on the server
-              .then(() => webex.meetings.syncMeetings())
-              .then(() => {
-                log.debug('device connected');
-                setDeviceConnected(true);
-              })
-              .catch((err) => {
-                log.error(err);
-                throw err;
-              });
-          }
-        } else{
-          log.debug('unable to authorize webex device');
+
+
+      // console.log(jwt);
+      // webex.authorization.requestAccessTokenFromJwt({jwt: jwt})
+      // .then(() => {
+      console.log(webex);
+      console.log('access token should now be set');
+      if (webex.canAuthorize) {
+        // Register our device with Webex cloud
+        if (!webex.meetings.registered) {
+          log.debug("device has not been registered, let's register now");
+          log.debug('webex in const', webex);
+          webex.meetings.register()
+          // Sync our meetings with existing meetings on the server
+            .then(() => webex.meetings.syncMeetings())
+            .then(() => {
+              log.debug('device connected');
+              setDeviceConnected(true);
+            })
+            .catch((err) => {
+              log.error(err);
+              throw err;
+            });
         }
-      });
+      } else{
+        log.debug('unable to authorize webex device');
+      }
+      // });
     };
     // bind necessary webex events to our meeting
     const bindMeetingEvents = (meeting) => {
@@ -210,7 +235,7 @@ function ActiveMeeting(props) {
       const generatedJWT = generateJWT(name, decodedName);
       setJWT(generatedJWT);
     }
-    if (jwt !== null) {
+    if (webex !== null) {
       log.debug('jwt is available, beginning registration');
       webex.once('ready', () => {
         log.debug('webex beginning to register');
@@ -266,7 +291,5 @@ function ActiveMeeting(props) {
         </div>
     )
 }
-
-
 
 export default ActiveMeeting;
