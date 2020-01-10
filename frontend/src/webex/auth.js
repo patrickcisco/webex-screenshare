@@ -4,8 +4,8 @@ var jwt = require('jsonwebtoken');
 const axios = require('axios').default;
 
 function generateJWT(userId, userName) {
-    const iss = 'Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi84ODQ3NTU3MC0yMGE3LTQzNmUtYjVkMi01MDE0M2NjMDA5ZTU';
-    const secret = '0m6EUFt7IfBipaStmHrLy6FBgk2SsJElhZ2dRR/YIw4=';
+    const iss = '';
+    const secret = '';
     let id  =  (Math.floor((Math.random() * 100000) + 1)).toString();
     let sub = userId + id
     let payload = {
