@@ -1263,6 +1263,33 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
+"@peculiar/asn1-schema@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@peculiar/asn1-schema/-/asn1-schema-1.0.3.tgz#e55ff9e98a1cf31832629aabacf85be3edf13a48"
+  integrity sha512-Tfgj9eNJ6cTKEtEuidKenLHMx/Q5M8KEE9hnohHqvdpqHJXWYr5RlT3GjAHPjGXy5+mr7sSfuXfzE6aAkEGN7A==
+  dependencies:
+    asn1js "^2.0.22"
+    tslib "^1.9.3"
+
+"@peculiar/json-schema@^1.1.9":
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/@peculiar/json-schema/-/json-schema-1.1.9.tgz#b746e046b787607a1b2804f64437fda2527b3e62"
+  integrity sha512-F2ST2y/IQPgY+1QMw1Q33sqJbGDCeO3lGqI69SL3Hgo0++7iHqprUB1QyxB/A7bN3tuM65MBxoM2JLbwh42lsQ==
+  dependencies:
+    tslib "^1.10.0"
+
+"@peculiar/webcrypto@^1.0.22":
+  version "1.0.23"
+  resolved "https://registry.yarnpkg.com/@peculiar/webcrypto/-/webcrypto-1.0.23.tgz#5519b839fba2cf8603bbbd6764dc41b108093dad"
+  integrity sha512-Ssb4xpQI3BJ0itAtT9y9jyeeiWNjcFvP6Wt/ehITxRYrEnlSfnrP7Ytc7BwN8XtnKmXDS2cWvppPldw5QsFCcw==
+  dependencies:
+    "@peculiar/asn1-schema" "^1.0.3"
+    "@peculiar/json-schema" "^1.1.9"
+    asn1js "^2.0.26"
+    pvtsutils "^1.0.9"
+    tslib "^1.11.1"
+    webcrypto-core "^1.0.17"
+
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -1672,19 +1699,19 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
-"@webex/common-timers@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/common-timers/-/common-timers-1.80.85.tgz#ae81994d1b9d7bff8291d0dfe493028afe7f1d98"
-  integrity sha512-oy22qcS0wYs4Estl5ncOzv2FflMHw8SCAAKNjiDNwHtfMo9pFFJbNFgDFug7Bzsn2DKhP3Ww6H4t1V6Xk9SvRg==
+"@webex/common-timers@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/common-timers/-/common-timers-1.80.151.tgz#b6e9cb5f0aae59ae8a3466770ad81279f2991437"
+  integrity sha512-tyuQLj1h7pCPzL5rFmYwle81brxNhU2aL3yzrxb5Mst8yRRD6AvIZl/bSdpNvGaw4j/MwbKjl2yoPdDWpP4iWg==
   dependencies:
     envify "^4.1.0"
 
-"@webex/common@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/common/-/common-1.80.85.tgz#6bf7afb72b99b7d8872a02a051c25056d1779524"
-  integrity sha512-c23oPFsON3gDpSZ9dB3PMJefIJmBKX+j2lzB+pF6Jhtjttu/HSX/isOLlI/Lux+e7xEjB1fEg6rCeIx7CLe7Lg==
+"@webex/common@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/common/-/common-1.80.151.tgz#f2ebc912353101ca7f742be2b2e8dcff742a75a6"
+  integrity sha512-bEKE4C5ygNRuP4P4iQhzKcbUzEfl6742Jhx4D6WPqsL89zHx9BworIk2db/rGcbp5xsuwoexS9zgMBb9v6B/KA==
   dependencies:
-    "@webex/common" "1.80.85"
+    "@webex/common" "1.80.151"
     babel-runtime "^6.26.0"
     backoff "^2.5.0"
     core-decorators "^0.20.0"
@@ -1692,21 +1719,21 @@
     lodash "^4.17.15"
     urlsafe-base64 "^1.0.0"
 
-"@webex/helper-html@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/helper-html/-/helper-html-1.80.85.tgz#8634e16637dfd5412fb89113071135def1b18751"
-  integrity sha512-SxYr0OLT6v9aJSZk1vgRnUytkGL76P6gRn1Bvk/Qs0z/bMaHwYPuOjaM8G3HYmJf/I5xryp6CmxX+dmbpYANiQ==
+"@webex/helper-html@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/helper-html/-/helper-html-1.80.151.tgz#80d08de725b40a33d474c2ae846b8d9495c5d4a6"
+  integrity sha512-lQ63qjmPQxRPF3gw8yKvs0C0nfYEdEouLrOeo8MNTomw/yeyeB39KjLUqpke4StRkmw/PtVDqMZTnER9i0R/mg==
   dependencies:
     babel-runtime "^6.26.0"
     envify "^4.1.0"
     lodash "^4.17.15"
 
-"@webex/helper-image@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/helper-image/-/helper-image-1.80.85.tgz#25db5f689acb4468755007a8777de20b34eb54a9"
-  integrity sha512-7hLZRLj3zfAprKyvCMg3DUlplwyysH/fLNvWRhdPYNCbwRLub4T+eqrowG8x+hs9oouBFismm7fd7Jg2cGi85A==
+"@webex/helper-image@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/helper-image/-/helper-image-1.80.151.tgz#27be2fdc0b374770b551a74b254228a3b052c5fe"
+  integrity sha512-HXmiKexeBm5OvU9YplRyIqFS/Uxy/xM30LQ0f8Gwv6nquhcvfPMpjP16KHlt1U/FfO2cyOCxiKA/f5Gr45bmyg==
   dependencies:
-    "@webex/http-core" "1.80.85"
+    "@webex/http-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
     exif "^0.6.0"
@@ -1714,12 +1741,12 @@
     lodash "^4.17.15"
     mime-types "^2.1.24"
 
-"@webex/http-core@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/http-core/-/http-core-1.80.85.tgz#2c28688d7ee12c4b83be9e2a1f3a4e671deb2b0a"
-  integrity sha512-7dD3MOhuc6qcRK1c3vo7+ryz6pFk3t0nnBWeQz41NPm0EYs9/Z/IwlzKSwvJgDHCAzLTwt68PID6C/itiQR6gQ==
+"@webex/http-core@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/http-core/-/http-core-1.80.151.tgz#5bd693f2afc14f0f22dcbca5dcf3da603fbe2da3"
+  integrity sha512-zvCKyLmFdJSavy7rCNRZAjeY+KI2ovX3l1g05jqLJS2p1iYdIAfPOKplkeQPmpbiu3RTgLSXwcmUzi6emvFifg==
   dependencies:
-    "@webex/common" "1.80.85"
+    "@webex/common" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
     file-type "^3.9.0"
@@ -1731,30 +1758,31 @@
     request "^2.88.0"
     xtend "^4.0.2"
 
-"@webex/internal-plugin-calendar@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-calendar/-/internal-plugin-calendar-1.80.85.tgz#87bdc4530caee2f5f8a2bc88ae440df4c38025b8"
-  integrity sha512-xG3HOLTB7KEyknw033EmNvB8/VyELWiDruZnq70RF3s1bap9vuYTvQ7qRfM+4Cu0mymjq5G0A2ANVODj7/dW+g==
+"@webex/internal-plugin-calendar@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-calendar/-/internal-plugin-calendar-1.80.151.tgz#1b6dc8a8a2d58266cb82e18539888c147696fbde"
+  integrity sha512-c9tbUdyJXDGHiF84UCTs4GPHuyeIEtuiq355JjjJ1lr3bIDtMq8gJSDFuxekcFsHDxXPEw0OEgKEKofzWWYtrw==
   dependencies:
-    "@webex/internal-plugin-conversation" "1.80.85"
-    "@webex/internal-plugin-encryption" "1.80.85"
-    "@webex/internal-plugin-wdm" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/internal-plugin-conversation" "1.80.151"
+    "@webex/internal-plugin-device" "1.80.151"
+    "@webex/internal-plugin-encryption" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
+    btoa "^1.2.1"
     envify "^4.1.0"
     lodash "^4.17.15"
 
-"@webex/internal-plugin-conversation@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-conversation/-/internal-plugin-conversation-1.80.85.tgz#40d48ace40d064fdf2b8b6ddfa2c76295566d7c4"
-  integrity sha512-aGKa87AvQl/i64mJ5EW/2eJHzpsgxeYZ8+0JLtWVLzxRrAeqhvny9cqGMRX9UdPtWkUBt8A58QHSJGhyyoNkXw==
+"@webex/internal-plugin-conversation@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-conversation/-/internal-plugin-conversation-1.80.151.tgz#f5d205563b4edf7da2478387ba09de01750742ef"
+  integrity sha512-auzyROfhRc9GanB4OQF0lPr1MhKKJb8QruJ1TAr6S6MBpIYfrTUvPyPJA7HFlUKk8D0zzPsqcujQk8LifD/6Gw==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/helper-html" "1.80.85"
-    "@webex/helper-image" "1.80.85"
-    "@webex/internal-plugin-encryption" "1.80.85"
-    "@webex/internal-plugin-user" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/helper-html" "1.80.151"
+    "@webex/helper-image" "1.80.151"
+    "@webex/internal-plugin-encryption" "1.80.151"
+    "@webex/internal-plugin-user" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     crypto-js "^3.1.9-1"
     envify "^4.1.0"
@@ -1762,17 +1790,34 @@
     node-scr "^0.2.2"
     uuid "^3.3.2"
 
-"@webex/internal-plugin-encryption@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-encryption/-/internal-plugin-encryption-1.80.85.tgz#88882973f79b229acffe1df299fa8ae05a4948cb"
-  integrity sha512-dxmHS1qAceGXusd+kMMRKtPELCOF8OfQKuSQ2F2+04e5BX0artr0hRQaM2prB5CXgY3ZwRCR/2PRoNGuhujXQg==
+"@webex/internal-plugin-device@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-device/-/internal-plugin-device-1.80.151.tgz#600f99f649bf704dc0974af737c4e9715bf0017e"
+  integrity sha512-L0UP/mluPuOCba74+xTRo/TUjFI9j3sIeivUD83RMC/15meUUJwZ3d12eBxT3ikaPcp1avdHOJ74OQBtJaHfMQ==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/common-timers" "1.80.85"
-    "@webex/http-core" "1.80.85"
-    "@webex/internal-plugin-mercury" "1.80.85"
-    "@webex/internal-plugin-wdm" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/common-timers" "1.80.151"
+    "@webex/http-core" "1.80.151"
+    "@webex/webex-core" "1.80.151"
+    ampersand-collection "^2.0.2"
+    ampersand-state "^5.0.3"
+    babel-runtime "^6.26.0"
+    envify "^4.1.0"
+    lodash "^4.17.15"
+
+"@webex/internal-plugin-encryption@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-encryption/-/internal-plugin-encryption-1.80.151.tgz#8ae5ed4fce9cfaa6fedff79b037972e20b104cff"
+  integrity sha512-P9zgKE2ON3IaOzyLO06iET0luzaU6QwLPah8nSfsayrWYoa1FlNMiFsLpHIBCojzR/P3gg7y2QxuHsQXCNqq6A==
+  dependencies:
+    "@peculiar/webcrypto" "^1.0.22"
+    "@webex/common" "1.80.151"
+    "@webex/common-timers" "1.80.151"
+    "@webex/http-core" "1.80.151"
+    "@webex/internal-plugin-device" "1.80.151"
+    "@webex/internal-plugin-mercury" "1.80.151"
+    "@webex/webex-core" "1.80.151"
+    asn1js "^2.0.26"
     babel-runtime "^6.26.0"
     debug "^3.2.6"
     envify "^4.1.0"
@@ -1780,44 +1825,46 @@
     node-jose "^0.11.1"
     node-kms "^0.3.2"
     node-scr "^0.2.2"
+    pkijs "^2.1.84"
+    valid-url "^1.0.9"
 
-"@webex/internal-plugin-feature@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-feature/-/internal-plugin-feature-1.80.85.tgz#a834b88d48ff21c3939b554afc868d5601f0552c"
-  integrity sha512-+J7YTTl6jscUAHv1jlolg2VN2KH3dXjVcPSqnfj4ZufyO+EjJNpsI7zyGMrG+bxgi+Nc+O7IFyar+kloNdxJ8g==
+"@webex/internal-plugin-feature@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-feature/-/internal-plugin-feature-1.80.151.tgz#839043e063b9d870f28bbd1587eb504f8c7951a3"
+  integrity sha512-8JytUmMTIQT3GVbSkq4BKfUANtE/b+WtqUgiKylZbvgaGetuJLyrX8gfhMCon79qS4J9nwx61rZkWET/1sQ8Ew==
   dependencies:
-    "@webex/internal-plugin-mercury" "1.80.85"
-    "@webex/internal-plugin-wdm" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/internal-plugin-device" "1.80.151"
+    "@webex/internal-plugin-mercury" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
     lodash "^4.17.15"
 
-"@webex/internal-plugin-lyra@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-lyra/-/internal-plugin-lyra-1.80.85.tgz#2c9ef5d42664dd0f39626ff6c46b5d12b3399576"
-  integrity sha512-KwnQpCabyGhCFITSS4tdKt7djAJrPp8curGXWskpzzfwOCnv66teBnE/yJOf5PJ+DzM20zgOcOxNzEOOq6Nb1w==
+"@webex/internal-plugin-lyra@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-lyra/-/internal-plugin-lyra-1.80.151.tgz#255110a6204642d99ea59d5520648493094ad508"
+  integrity sha512-ZMH2WCrJwxEFiZGLTAKaMiv78EndJzHMU9WbjTDGZmUJLPOlyu5CvQ81gVkxtQOnYCrWvzP8i8sMPaCnjvellg==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/internal-plugin-conversation" "1.80.85"
-    "@webex/internal-plugin-encryption" "1.80.85"
-    "@webex/internal-plugin-feature" "1.80.85"
-    "@webex/internal-plugin-mercury" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/internal-plugin-conversation" "1.80.151"
+    "@webex/internal-plugin-encryption" "1.80.151"
+    "@webex/internal-plugin-feature" "1.80.151"
+    "@webex/internal-plugin-mercury" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
 
-"@webex/internal-plugin-mercury@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-mercury/-/internal-plugin-mercury-1.80.85.tgz#62d67234c6fd8e9e82259cb782dd4be4c0ea798c"
-  integrity sha512-Us4N1VdqcA8pkPAEgj+7CDRneQIK96Dh5k9L06xOap9fmhYwCtNNLu7zmnAyKLH3HwQytS1XYtM90a9gRSyc2w==
+"@webex/internal-plugin-mercury@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-mercury/-/internal-plugin-mercury-1.80.151.tgz#67a4bb65ca7f1038f785dd28cf98b393dffad089"
+  integrity sha512-++RL5ApMuZYixBRMW6uWkaxDzGcoy5W3haniWvZ9VjvbRewu7+o3EjqeLrH4FkjkKdWmRT3nfdBD2kSDLur6IQ==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/common-timers" "1.80.85"
-    "@webex/internal-plugin-feature" "1.80.85"
-    "@webex/internal-plugin-metrics" "1.80.85"
-    "@webex/internal-plugin-wdm" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/common-timers" "1.80.151"
+    "@webex/internal-plugin-device" "1.80.151"
+    "@webex/internal-plugin-feature" "1.80.151"
+    "@webex/internal-plugin-metrics" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     backoff "^2.5.0"
     envify "^4.1.0"
@@ -1825,149 +1872,135 @@
     uuid "^3.3.2"
     ws "^4.1.0"
 
-"@webex/internal-plugin-metrics@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-metrics/-/internal-plugin-metrics-1.80.85.tgz#998692429b84aa8a7108d2f1509f546c310dc885"
-  integrity sha512-kIO4yfkaV+4/iHn2ux+oIprui/fD1rn/xPN47l1fcoo3afravCldsaBQ9PaHWk01NgMy7Xs7z38Je6OdlKiOLg==
+"@webex/internal-plugin-metrics@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-metrics/-/internal-plugin-metrics-1.80.151.tgz#fcd6b246237b44190f420a1694ef4c029c03378e"
+  integrity sha512-LUKHQq9ymBpD7ye3t1/Y3ZUnV6YhlI5MqOJv+30YfFIlNUj3LmNPaew7Gwy/vE/02nKgom/5m9VTTZlKjoeN5A==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/common-timers" "1.80.85"
-    "@webex/internal-plugin-wdm" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/common-timers" "1.80.151"
+    "@webex/internal-plugin-device" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
 
-"@webex/internal-plugin-presence@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-presence/-/internal-plugin-presence-1.80.85.tgz#70b6f9cff4781c1276402d7293a39b76e137657f"
-  integrity sha512-2x4NPiBlO29ExcmrRlj/9KpU3Nnrc2qlDvZ3JbaNF3tY45bSIxEnbRFuRjq+PzzxscVZd15b9ZqO/d6Xtqumww==
+"@webex/internal-plugin-presence@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-presence/-/internal-plugin-presence-1.80.151.tgz#ac4e2db280be24610eca9edd201f04b21bfdebe9"
+  integrity sha512-9v9ZjEoAya+xuTk59jSC0baqRKTS4RKaG+bd2RZX9KERL2wl6V39Q4hvho2tNvX3R54mSULSS3LBRZESVlA6cw==
   dependencies:
-    "@webex/internal-plugin-wdm" "1.80.85"
-    "@webex/webex-core" "1.80.85"
-    babel-runtime "^6.26.0"
-    envify "^4.1.0"
-    lodash "^4.17.15"
-
-"@webex/internal-plugin-search@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-search/-/internal-plugin-search-1.80.85.tgz#3059a9e72a5855205a3f07cbc93c8762466cd85c"
-  integrity sha512-Xjq2el5lBq7nMn5jPHvg6xEuVSMNoSTfcQK4YHsXfQ9wjx0ctP7wXyx7emvWK1V/ButXnwiG+k9wEIgaECFjTg==
-  dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/internal-plugin-encryption" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/internal-plugin-device" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
     lodash "^4.17.15"
 
-"@webex/internal-plugin-user@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-user/-/internal-plugin-user-1.80.85.tgz#2b799268cb541552116f311d989107e8708a7374"
-  integrity sha512-wXrWcLCnDpHsPbfQF6ypZM0LinSYwlPx5ZpygwFyndqGOhuo4OrLFE6K9pTosYL18/qJiIuAssBe+9lqf72pwA==
+"@webex/internal-plugin-search@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-search/-/internal-plugin-search-1.80.151.tgz#dcbd780e4f36ff45a67e3c211d7fabf704291bf9"
+  integrity sha512-qcykQ34l4oQoW05hLCWY4NhOi7pu4ezqtJsngq63QImctsPH8qn3Ky9/9Xi7aeXadWRGBsNmMKinhlgyBaB3zQ==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/internal-plugin-wdm" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/internal-plugin-conversation" "1.80.151"
+    "@webex/internal-plugin-encryption" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
     lodash "^4.17.15"
 
-"@webex/internal-plugin-wdm@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-wdm/-/internal-plugin-wdm-1.80.85.tgz#6f15ea3413342db8e9cbe9135e5006f6fca176fc"
-  integrity sha512-JpZsZ4H6hdjhEFk8tadT2FH//N6A7IVt/RlS/ZqJazcuuUsv9jaknHXtKYCwcktAqVZVE0wUA56UvsNjrRboGg==
+"@webex/internal-plugin-user@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/internal-plugin-user/-/internal-plugin-user-1.80.151.tgz#7617912b31081cb16fd12647d05e11cc85a98ebc"
+  integrity sha512-p2uOda5e5SoDKKU0WDU6E4huaBgomI16h60WBsPV2R+8rIH1EOK/IUAzmNISbZ/Y6XKLVexfcEEtO52xLI8C0Q==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/common-timers" "1.80.85"
-    "@webex/http-core" "1.80.85"
-    "@webex/webex-core" "1.80.85"
-    ampersand-collection "^2.0.2"
-    ampersand-state "^5.0.3"
+    "@webex/common" "1.80.151"
+    "@webex/internal-plugin-device" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
     lodash "^4.17.15"
 
-"@webex/plugin-attachment-actions@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-attachment-actions/-/plugin-attachment-actions-1.80.85.tgz#c76c205703e92ca1fe1b375e3d612f243c10713a"
-  integrity sha512-NhJlz111oy2loQCwA8tl8U94x6I9iQGao0BHSYYqiU+xyIwNlWOHMm2cdwmhPjfARPKSoIAaYDSR5HrehUAdNw==
+"@webex/plugin-attachment-actions@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-attachment-actions/-/plugin-attachment-actions-1.80.151.tgz#5522272198868d7da72b88e7e78d0ffc6a7dafc5"
+  integrity sha512-jufRVv0msZWfwE6aYBU73LzguVEwySNJR825rqSjr/sALS/DpH0g6BFFc0J8MFqxfAZbWFhndqbn+QrV7sJhCA==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/internal-plugin-conversation" "1.80.85"
-    "@webex/internal-plugin-mercury" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/internal-plugin-conversation" "1.80.151"
+    "@webex/internal-plugin-mercury" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     debug "^3.2.6"
     envify "^4.1.0"
     lodash "^4.17.15"
 
-"@webex/plugin-authorization-browser@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-authorization-browser/-/plugin-authorization-browser-1.80.85.tgz#8ae8d79c50cf183a7f8cbaef9b2b979972bb166e"
-  integrity sha512-nYUkGrMvPj1m18l9IbONXqTfj2sK3iamDjREJ1HcrozUQG0mltlNO7dFx7WJXqv0E74GB2/AjWJN8tYJFljobQ==
+"@webex/plugin-authorization-browser@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-authorization-browser/-/plugin-authorization-browser-1.80.151.tgz#33a4da93188ea2823880adb2143beddb9f299e67"
+  integrity sha512-/xrpTjVnKYzCCUNw7yw6RHPq9D37+p4kkGrFi+no51bfQkKPz5rJ8pKUs0xM+/lTVG7dXK8JRz4uMNa7zy6gtw==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/internal-plugin-wdm" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/internal-plugin-device" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
     lodash "^4.17.15"
     uuid "^3.3.2"
 
-"@webex/plugin-authorization-node@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-authorization-node/-/plugin-authorization-node-1.80.85.tgz#130f918f63f6e9b49d6742700e68f69f4116f50a"
-  integrity sha512-XA0NDc244sgQIkjadKo9+VzMbCsLK+xkZ+nyDMkTm1UvFOWOl+nYN+IwoAWWuSTKUwf+RwJPWXCX2FqS53r6og==
+"@webex/plugin-authorization-node@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-authorization-node/-/plugin-authorization-node-1.80.151.tgz#32ef76ab2ba699b7138932e1be5a3ca38da130e9"
+  integrity sha512-w41K4IAxUqMp7ZZH51chJn4nZ/uyXjbfklqKGpUOv6N4tZGTVrmXUrO6D83oFCHaNRZ4Retc/P+nK+V3LSlv8Q==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/internal-plugin-wdm" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/internal-plugin-device" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
 
-"@webex/plugin-authorization@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-authorization/-/plugin-authorization-1.80.85.tgz#95fe7cf3b9b82e6b6db7e7902f1f7ef7f8f6286b"
-  integrity sha512-VsPSAp0BZXicLqTbpWf1cAOSt+sP0ZqG3tJ6z35peBq5K0zanALNHomNqrfqYQAC4XEN/GXLodShI7DTcmZHVw==
+"@webex/plugin-authorization@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-authorization/-/plugin-authorization-1.80.151.tgz#9a5256ea1b7499ca3fcbab966e065ad980526184"
+  integrity sha512-J/w2UVs+r0/wH+zXK2l/FU8ExqLuzXbXN0k3U6CHZ12JofH7LWz1gbzW6gh7Q4kPYH4+/YRo3eJmbc6s0HsGiw==
   dependencies:
-    "@webex/plugin-authorization-browser" "1.80.85"
-    "@webex/plugin-authorization-node" "1.80.85"
+    "@webex/plugin-authorization-browser" "1.80.151"
+    "@webex/plugin-authorization-node" "1.80.151"
     envify "^4.1.0"
 
-"@webex/plugin-device-manager@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-device-manager/-/plugin-device-manager-1.80.85.tgz#bb2b11fb0d72c233b655e7a4c53c3472c76db7bd"
-  integrity sha512-PhgIhDwsvBqATxQK9EG4vXAZlN/UjQLhaTRKnodrQexP3Lu1eY5hVWvOhdGXalr4QrWyQ69HNjMGX/iPcfKXRw==
+"@webex/plugin-device-manager@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-device-manager/-/plugin-device-manager-1.80.151.tgz#fc17c973eb6d5a6a670f9ab62499f636ea7a7260"
+  integrity sha512-9jmGA0OjZkHWG0C8RxZCaLCa/VFy+PXWlpxR1BfHJmfWDG2miAVcl02dxRrJ3rI98GX5rw8a5snWHFz2rzeaCg==
   dependencies:
-    "@webex/internal-plugin-lyra" "1.80.85"
-    "@webex/internal-plugin-search" "1.80.85"
-    "@webex/internal-plugin-wdm" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/internal-plugin-device" "1.80.151"
+    "@webex/internal-plugin-lyra" "1.80.151"
+    "@webex/internal-plugin-search" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
     lodash "^4.17.15"
     uuid "^3.3.2"
 
-"@webex/plugin-logger@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-logger/-/plugin-logger-1.80.85.tgz#f1920809c7906c75968f07771711ca03c9281869"
-  integrity sha512-iuLMRGI6ZbvgHzU9PRgForqoV8qh6EQ4Z37auVmHn8zR6+5PlX9I3vFaBnzumLCi/NtDxGQfPRNba2Jl/gHM9g==
+"@webex/plugin-logger@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-logger/-/plugin-logger-1.80.151.tgz#ed850473cc79932dccf06e78b74640905805d0ed"
+  integrity sha512-fA/tvm0jmBW/l3I6Zgnu3ZP6SCWj8tsSm//AG3jTkj2JeW9Q+3Fyf/ca41gP6XfNaXm4Qmaaa3BoP8zT19cEzA==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
     lodash "^4.17.15"
 
-"@webex/plugin-meetings@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-meetings/-/plugin-meetings-1.80.85.tgz#d07ebad0fa2869529852c8e7a2be504e4c9ed2be"
-  integrity sha512-HgynHs2bNS29/SIP4+TYko4IdG7h/GmslAHZxLybCGk0ghpuWlOpfLW5zytAGw2+qK62svCT4UrMagM+S4RxzA==
+"@webex/plugin-meetings@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-meetings/-/plugin-meetings-1.80.151.tgz#734ade056e29defd84a35a502798476bb5dbd419"
+  integrity sha512-sX6wbV2eUJmKUGhZUiFX5cTOXGniWHwslXz23txjHW8mvnqN7ik/zeC4hGUftb/eELasl0hUqcC/XqgDS4Sb4Q==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/common-timers" "1.80.85"
-    "@webex/internal-plugin-mercury" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/common-timers" "1.80.151"
+    "@webex/internal-plugin-mercury" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     bowser "1.9.4"
     btoa "^1.2.1"
@@ -1978,106 +2011,108 @@
     sdp-transform "^2.12.0"
     uuid "^3.3.2"
 
-"@webex/plugin-memberships@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-memberships/-/plugin-memberships-1.80.85.tgz#4c6da53505b7b07efa392e44a064ece8d241a2ae"
-  integrity sha512-kx8z/RgnKUsU26TfKwi26d16PvIuPINibZRYIEPaBWWpdywy8Q/WN9FuZxeXorbhrBoD7f9onfd2HTJp0mTYVg==
+"@webex/plugin-memberships@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-memberships/-/plugin-memberships-1.80.151.tgz#28a47640876698832d8154b9e804643f0e55d791"
+  integrity sha512-XQlqGYNmj16eSIAh+GzrNkesLOdy57D2+TDqb2+qk7bV9laE4btzDxeOKO4C89KqsojxO/MXc6qFVtRghZzkpA==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/internal-plugin-conversation" "1.80.85"
-    "@webex/internal-plugin-mercury" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/internal-plugin-conversation" "1.80.151"
+    "@webex/internal-plugin-mercury" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     debug "^3.2.6"
     envify "^4.1.0"
     lodash "^4.17.15"
 
-"@webex/plugin-messages@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-messages/-/plugin-messages-1.80.85.tgz#14de6c451e1c55d6ebcfc02589e226bc4715863c"
-  integrity sha512-tg6eSEViCdYFRA29q8B6vtBl47Eg0oRwHMh92Kro+fwCvDAcSz7zmu33R+GsBMK8iB6TSpIy4RU1m4wQmbhrKQ==
+"@webex/plugin-messages@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-messages/-/plugin-messages-1.80.151.tgz#f524fb4031f32499390ef15dba533ae6f20ca987"
+  integrity sha512-YRPcsoidsQralOxwR64M/2ENIygAhAMron0ZOMrBfh2/vRx7OsUC6DivNQJN8S2F5VB7BNPFi9ewWFVfwOCteA==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/internal-plugin-conversation" "1.80.85"
-    "@webex/internal-plugin-mercury" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/internal-plugin-conversation" "1.80.151"
+    "@webex/internal-plugin-mercury" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     debug "^3.2.6"
     envify "^4.1.0"
     lodash "^4.17.15"
 
-"@webex/plugin-people@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-people/-/plugin-people-1.80.85.tgz#90bf6f61d7810a24533b2f44c5c07b270168d17a"
-  integrity sha512-TY76+XxuMtecX+lDrG6MOMZXbqyw8wQoRLnjYIg5GqPvgfPC+O2m/AhhXLFtinDcztbd9L7qy1O4zWz/ax1H2A==
+"@webex/plugin-people@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-people/-/plugin-people-1.80.151.tgz#ab8f44eb2aadc341a4d825ba27536842bb29b65e"
+  integrity sha512-Cpsbg1rt+2Euar1hkdTatraZnHOVUI65v6GKhyXf79dFiS3fK74hVPZ4QoDfexQs7IsfEZo7/UNcsiBeDCmkTw==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
 
-"@webex/plugin-rooms@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-rooms/-/plugin-rooms-1.80.85.tgz#b8d8bd5dd03777db6c169fa76b4bda9c335a637b"
-  integrity sha512-EopVpM3K0IM/pL/0/wzB0NE7JArDD+FhKPT6yxBLigdNO1f3ufRi5BgXq3etn3NY7qLZLks4x8PesLLjPuLGLQ==
+"@webex/plugin-rooms@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-rooms/-/plugin-rooms-1.80.151.tgz#8a59c3b03b3920295597fb9d2a1aed9847202380"
+  integrity sha512-MawxrlYKKSMtmfl8v3D4+Dh3NrmS27YPYGRUXJJvof4DezRnmE7IjGR3tLgPkT0GjsiezeAPpCGM/i0q47QMUg==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/internal-plugin-conversation" "1.80.85"
-    "@webex/internal-plugin-mercury" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/internal-plugin-conversation" "1.80.151"
+    "@webex/internal-plugin-mercury" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     debug "^3.2.6"
     envify "^4.1.0"
     lodash "^4.17.15"
 
-"@webex/plugin-team-memberships@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-team-memberships/-/plugin-team-memberships-1.80.85.tgz#427fec03ab7f5b92b60499f9b4f878898e778fa6"
-  integrity sha512-Jog3vjKRMqN8+SxcVsOCpnKIyqqkOHHvIe6xNVzAInPrWrfp1X4eKGZJIVVzSPqUP0zMcHLypE4PqeCLfO/KPQ==
+"@webex/plugin-team-memberships@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-team-memberships/-/plugin-team-memberships-1.80.151.tgz#6a2df133a6ae245ea7a316743248e1bdc2b25954"
+  integrity sha512-9cfd5JEsWaN4xmdJPWrVZGYmh2uZWwHEYA7t2qiOyWrFBjPq45HSSSMDCPINzleNRXFv2VzJFvIUOvc+Acc3oA==
   dependencies:
-    "@webex/webex-core" "1.80.85"
+    "@webex/webex-core" "1.80.151"
     envify "^4.1.0"
 
-"@webex/plugin-teams@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-teams/-/plugin-teams-1.80.85.tgz#dc307fd22fcdb3089aa58c3c1e1a473772bcbcf1"
-  integrity sha512-yzssshZsuGkpgmLSwh5i9+ijcI5y1CFfl9rGMBZVqctYqMGpVpv+1XRezROd9YfNJMIX6Savemx6TGxKJDptfg==
+"@webex/plugin-teams@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-teams/-/plugin-teams-1.80.151.tgz#049c888383e34321549f1eae34c2c7b1405299ef"
+  integrity sha512-XFEbk3RM6LojM1G9yKE3TDis1MVIVaFGpQmCGsMRVziqr6AhaJWVabczdXnV20MVulkp0UqRG99LXYwWGzM1Kg==
   dependencies:
-    "@webex/webex-core" "1.80.85"
+    "@webex/webex-core" "1.80.151"
     envify "^4.1.0"
 
-"@webex/plugin-webhooks@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/plugin-webhooks/-/plugin-webhooks-1.80.85.tgz#3e3d7a4a1bb9de89b3d8f06cf645bc0a45920be0"
-  integrity sha512-+KLmAaG5yNvOg1a50spQ7LgM2uNh4KrJiYgQRKGK+/tyMvfzZ68mcGyh/48rgtwyDEbv7lJH489acQht58JHqQ==
+"@webex/plugin-webhooks@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/plugin-webhooks/-/plugin-webhooks-1.80.151.tgz#573107d5d1211f398109bf1f82bd195c2f7d543c"
+  integrity sha512-3uyB+zwRNOF1RhRwIlEVEAwU/8FhIG4F5W8pOiltoVLuDP3RtIM2zP7o0fYp37e3Uj9UbLxWqCDdZj90IPpAwA==
   dependencies:
-    "@webex/webex-core" "1.80.85"
+    "@webex/webex-core" "1.80.151"
     envify "^4.1.0"
 
-"@webex/storage-adapter-local-storage@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/storage-adapter-local-storage/-/storage-adapter-local-storage-1.80.85.tgz#6dcdcb0666936e9a45f9fa8bd49a5f3dd16a3fe9"
-  integrity sha512-6xxXwpDlqLQbTxSEBsSoggtTPcYKig+jnKqt1SZMlftlAubUfvfTUSq0ck94SKat7CB5rZtbZgelznq4CO7wKA==
+"@webex/storage-adapter-local-storage@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/storage-adapter-local-storage/-/storage-adapter-local-storage-1.80.151.tgz#16d4fd01b00792500e248149a131772845dd5e05"
+  integrity sha512-FNoIq853LwlavnEr9hve9u4Hz7t8LhUe4/iNP/ZMM55xTTQjp6Ar0SqPytHKklkH1HxfZmeaiumTPB6BXE8TvA==
   dependencies:
-    "@webex/webex-core" "1.80.85"
+    "@webex/webex-core" "1.80.151"
     babel-runtime "^6.26.0"
     envify "^4.1.0"
 
-"@webex/webex-core@1.80.85":
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/@webex/webex-core/-/webex-core-1.80.85.tgz#7acd060b33bc469f6a60409a09b283df73a7b6be"
-  integrity sha512-1rpigTHE9nNUEm/BWCijoR62vtghXnzg5IHMf3xbSCvqigchfBZAqxjFQcEHhE0K1SvS6gFBnkOEmpky1XCrAQ==
+"@webex/webex-core@1.80.151":
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/@webex/webex-core/-/webex-core-1.80.151.tgz#ef1481508a1ad8da19e231dd6103e2fd15095805"
+  integrity sha512-fhseE8ksdU+rkL5SZg0kmrPopeJeUi9F/t4rhs5YA1b0UbUhZxoU190zbtUDpDrqPREvDHalZHyR0y2VIJwZgQ==
   dependencies:
-    "@webex/common" "1.80.85"
-    "@webex/common-timers" "1.80.85"
-    "@webex/http-core" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    "@webex/common" "1.80.151"
+    "@webex/common-timers" "1.80.151"
+    "@webex/http-core" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     ampersand-collection "^2.0.2"
     ampersand-events "^2.0.2"
     ampersand-state "^5.0.3"
     babel-runtime "^6.26.0"
     core-decorators "^0.20.0"
+    crypto-js "^3.1.9-1"
     envify "^4.1.0"
+    jsonwebtoken "^8.5.1"
     lodash "^4.17.15"
     uuid "^3.3.2"
 
@@ -2123,9 +2158,9 @@ acorn-walk@^6.0.1:
   integrity sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==
 
 acorn@^5.5.3:
-  version "5.7.3"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
-  integrity sha512-T/zvzYRfbVojPWahDsE5evJdHb3oJoQfFbsrKM7w5Zcs++Tr257tia3BmMP8XYVjp1S9RZXQMh7gao96BlqZOw==
+  version "5.7.4"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.4.tgz#3e8d8a9947d0599a1796d10225d7432f4a4acf5e"
+  integrity sha512-1D++VG7BhrtvQpNbBzovKNc1FLGGEE/oGe7b9xJm/RFHMBeUaUGpluV9RLjZa47YFdPcDAenEYuq9pQPcMdLJg==
 
 acorn@^6.0.1, acorn@^6.0.4, acorn@^6.2.1:
   version "6.4.0"
@@ -2405,6 +2440,13 @@ asn1@~0.2.3:
   integrity sha512-jxwzQpLQjSmWXgwaCZE9Nz+glAG01yF1QnWgbhGwHI5A6FRIEY6IVqtHhIepHqI7/kyEyQEagBC5mBEFlIYvdg==
   dependencies:
     safer-buffer "~2.1.0"
+
+asn1js@^2.0.22, asn1js@^2.0.26, asn1js@latest:
+  version "2.0.26"
+  resolved "https://registry.yarnpkg.com/asn1js/-/asn1js-2.0.26.tgz#0a6d435000f556a96c6012969d9704d981b71251"
+  integrity sha512-yG89F0j9B4B0MKIcFyWWxnpZPLaNTjCj4tkE3fjbAoo0qmpGw0PYYqSbX/4ebnd9Icn8ZgK4K1fvDyEtW1JYtQ==
+  dependencies:
+    pvutils latest
 
 assert-plus@1.0.0, assert-plus@^1.0.0:
   version "1.0.0"
@@ -2953,6 +2995,11 @@ bytes@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.0.tgz#f6cf7933a360e0588fa9fde85651cdc7f805d1f6"
   integrity sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
+
+bytestreamjs@latest:
+  version "1.0.29"
+  resolved "https://registry.yarnpkg.com/bytestreamjs/-/bytestreamjs-1.0.29.tgz#691f8ee8e5a150c61b925993a3eec0911ed17f1d"
+  integrity sha512-Mri3yqoo9YvdaSvD5OYl4Rdu9zCBJInW/Ez31sdlNY4ikMy//EvTTmidfLcs0e+NBvKVEpPzYvJAesjgMdjnZg==
 
 cacache@^12.0.2:
   version "12.0.3"
@@ -8280,6 +8327,15 @@ pkg-up@2.0.0:
   dependencies:
     find-up "^2.1.0"
 
+pkijs@^2.1.84:
+  version "2.1.86"
+  resolved "https://registry.yarnpkg.com/pkijs/-/pkijs-2.1.86.tgz#c91bab8bf6dd7b79c9fe7bf01296804d7110b52f"
+  integrity sha512-as2o5eIdMX1Jxmex3WXoF08teQ1/KQz8vS8EkIAKMcJ44XKVALo7MQCs/P0BDPzGh8sKUG69E9GsHw+YnjnkHQ==
+  dependencies:
+    asn1js latest
+    bytestreamjs latest
+    pvutils latest
+
 pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
@@ -9132,6 +9188,18 @@ punycode@^2.1.0, punycode@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
+
+pvtsutils@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/pvtsutils/-/pvtsutils-1.0.9.tgz#0eb6106f27878ccaa55e7dfbf6bd2c75af461dee"
+  integrity sha512-/kDsuCKPqJuIzn37w6+iN+TiSrN+zrwPEd7FjT61oNbRvceGdsS94fMEWZ4/h6QZU5EZhBMiV+79IYedroP/Yw==
+  dependencies:
+    tslib "^1.10.0"
+
+pvutils@latest:
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/pvutils/-/pvutils-1.0.17.tgz#ade3c74dfe7178944fe44806626bd2e249d996bf"
+  integrity sha512-wLHYUQxWaXVQvKnwIDWFVKDJku9XDCvyhhxoq8dc5MFdIlRenyPI9eSfEtcvgHgD7FlvCyGAlWgOzRnZD99GZQ==
 
 q@^1.1.2:
   version "1.5.1"
@@ -10780,6 +10848,11 @@ ts-pnp@^1.1.2:
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.1.5.tgz#840e0739c89fce5f3abd9037bb091dbff16d9dec"
   integrity sha512-ti7OGMOUOzo66wLF3liskw6YQIaSsBgc4GOAlWRnIEj8htCxJUxskanMUoJOD6MDCRAXo36goXJZch+nOS0VMA==
 
+tslib@^1.10.0, tslib@^1.11.1, tslib@^1.9.3:
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
+  integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
+
 tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
@@ -11049,6 +11122,11 @@ v8-compile-cache@^2.0.3:
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.1.0.tgz#e14de37b31a6d194f5690d67efc4e7f6fc6ab30e"
   integrity sha512-usZBT3PW+LOjM25wbqIlZwPeJV+3OSz3M1k1Ws8snlW39dZyYL9lOGC5FgPVHfk0jKmjiDV8Z0mIbVQPiwFs7g==
 
+valid-url@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/valid-url/-/valid-url-1.0.9.tgz#1c14479b40f1397a75782f115e4086447433a200"
+  integrity sha1-HBRHm0DxOXp1eC8RXkCGRHQzogA=
+
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz#fc91f6b9c7ba15c857f4cb2c5defeec39d4f410a"
@@ -11125,28 +11203,36 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-webex@^1.80.18:
-  version "1.80.85"
-  resolved "https://registry.yarnpkg.com/webex/-/webex-1.80.85.tgz#45c1c67c33a601cbc052a8cf6d0937de903abe8a"
-  integrity sha512-PJUqSgFWp3fgQGioYGk0JN4rmzGfUVxxLQPHl32GyJVLqoY91ZThFin3JZxjEhRcad/Ah8QT8HtvOZlYDOl/9w==
+webcrypto-core@^1.0.17:
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/webcrypto-core/-/webcrypto-core-1.0.17.tgz#a9354bc0b1ba6735e882f4137ede2c4366e6ad9b"
+  integrity sha512-7jxTLgtM+TahBPErx/Dd2XvxFDfWJrHxjVeTSvIa4LSgiYrmCPlC2INiAMAfb8MbtHiwJKKqF5sPS0AWNjBbXw==
   dependencies:
-    "@webex/internal-plugin-calendar" "1.80.85"
-    "@webex/internal-plugin-presence" "1.80.85"
-    "@webex/internal-plugin-wdm" "1.80.85"
-    "@webex/plugin-attachment-actions" "1.80.85"
-    "@webex/plugin-authorization" "1.80.85"
-    "@webex/plugin-device-manager" "1.80.85"
-    "@webex/plugin-logger" "1.80.85"
-    "@webex/plugin-meetings" "1.80.85"
-    "@webex/plugin-memberships" "1.80.85"
-    "@webex/plugin-messages" "1.80.85"
-    "@webex/plugin-people" "1.80.85"
-    "@webex/plugin-rooms" "1.80.85"
-    "@webex/plugin-team-memberships" "1.80.85"
-    "@webex/plugin-teams" "1.80.85"
-    "@webex/plugin-webhooks" "1.80.85"
-    "@webex/storage-adapter-local-storage" "1.80.85"
-    "@webex/webex-core" "1.80.85"
+    pvtsutils "^1.0.9"
+    tslib "^1.10.0"
+
+webex@^1.80.85:
+  version "1.80.151"
+  resolved "https://registry.yarnpkg.com/webex/-/webex-1.80.151.tgz#3bd5c27d42fd1d4e90bb4e9c8732b442b17fbbed"
+  integrity sha512-zYmHN0rFlj3bAO3TSRtotxWYUdfd1x9zDyQQbBc67f+3droJc7geCFricofuD8WUqRV8AqMXfrHSqmrnhBNIZA==
+  dependencies:
+    "@webex/internal-plugin-calendar" "1.80.151"
+    "@webex/internal-plugin-device" "1.80.151"
+    "@webex/internal-plugin-presence" "1.80.151"
+    "@webex/plugin-attachment-actions" "1.80.151"
+    "@webex/plugin-authorization" "1.80.151"
+    "@webex/plugin-device-manager" "1.80.151"
+    "@webex/plugin-logger" "1.80.151"
+    "@webex/plugin-meetings" "1.80.151"
+    "@webex/plugin-memberships" "1.80.151"
+    "@webex/plugin-messages" "1.80.151"
+    "@webex/plugin-people" "1.80.151"
+    "@webex/plugin-rooms" "1.80.151"
+    "@webex/plugin-team-memberships" "1.80.151"
+    "@webex/plugin-teams" "1.80.151"
+    "@webex/plugin-webhooks" "1.80.151"
+    "@webex/storage-adapter-local-storage" "1.80.151"
+    "@webex/webex-core" "1.80.151"
     babel-polyfill "^6.26.0"
     envify "^4.1.0"
     lodash "^4.17.15"
